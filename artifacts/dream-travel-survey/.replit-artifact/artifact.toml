@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Dream Travel Survey"
+version = "1.0.0"
+id = "artifacts/dream-travel-survey"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24001
+
+[services.development]
+run = "pnpm --filter @workspace/dream-travel-survey run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dream-travel-survey", "run", "build" ]
+publicDir = "artifacts/dream-travel-survey/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24001"
+BASE_PATH = "/"

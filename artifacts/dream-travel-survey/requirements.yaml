@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "Smooth entry animations for a premium feel"
+  "react-hook-form": "Form state management"
+  "@hookform/resolvers": "Zod schema validation for forms"
+  "recharts": "Data visualization for the results page"
+  "@supabase/supabase-js": "Direct database connection for frontend-only app"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to safely merge Tailwind CSS classes"
+
+images:
+  - path: "artifacts/dream-travel-survey/public/images/hero-bg.png"
+    description: "Minimalist, soft, abstract gradient background with flowing shapes in light white, very soft purple, and subtle gray tones. Elegant and clean."
+    aspect_ratio: "16:9"
+
+notes:
+  - "The app relies on VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to connect to Supabase directly."
+  - "No backend API server is used; data operations are client-to-Supabase."
